@@ -10,6 +10,7 @@
  *
  * Return: pointer to new dog
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	unsigned int nl, ol, i;
@@ -18,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name == NULL || owner == NULL)
 		return (NULL);
 	dog = malloc(sizeof(dog_t));
-	if (dog == NULL
+	if (dog == NULL)
 		return (NULL);
 	for (nl = 0; name[nl]; nl++)
 		;
