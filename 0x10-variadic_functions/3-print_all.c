@@ -2,14 +2,13 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-
 /**
  * print_c - print a char
  * @c: char to print
  *
  * Return: void
  */
-void print_c(va_list c
+void print_c(va_list c)
 {
 	printf("%c", va_arg(c, int));
 }
@@ -70,14 +69,13 @@ void print_all(const char * const format, ...)
 	va_list valist;
 	char *separator = "";
 
-char *separator = "";
-
+	va_start(valist, format);
 	i = 0;
 	while (format && format[i])
 	{
 		j = 0;
-		j = 0;
-
+		while (p[j].t != NULL)
+		{
 			if (*(p[j].t) == format[i])
 			{
 				printf("%s", separator);
